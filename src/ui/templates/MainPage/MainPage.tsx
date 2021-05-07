@@ -1,6 +1,6 @@
 import React from 'react';
-import { BuyFontsPage } from '../BuyFontsPage/BuyFontsPage';
-import { MyFontsPage } from '../MyFontsPage/MyFontsPage';
+import { BuyFontsPage } from '../../organisms/BuyFontsPage/BuyFontsPage';
+import { MyFontsPage } from '../../organisms/MyFontsPage/MyFontsPage';
 
 import './MainPage.scss';
 
@@ -23,8 +23,8 @@ export const MainPage = () => {
             <div className="main-container__navigation">
                 <div className="description"><span>Please select one font</span></div>
                 <div className="links">
-                    <span onClick={onShowMyFonts}>MY FONTS</span>
-                    <span onClick={onShowBuyFonts}>BUY FONTS</span>
+                    <span onClick={onShowMyFonts} className={myFont ? 'active-button' : ''}>MY FONTS</span>
+                    <span onClick={onShowBuyFonts} className={buyFont ? 'active-button' : ''}>BUY FONTS</span>
                 </div>
             </div>
             <div className="main-container__content">
